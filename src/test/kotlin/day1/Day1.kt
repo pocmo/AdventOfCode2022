@@ -2,7 +2,7 @@ package day1
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import java.io.File
+import util.TestFiles
 
 class Day1 {
     @Test
@@ -34,12 +34,5 @@ class Day1 {
         val sum = elves.sumOfTopThree()
         println("Result: $sum")
         assertEquals(206582, sum)
-    }
-}
-
-object TestFiles {
-    fun readTestFile(name: String): File {
-        val classLoader = javaClass.classLoader
-        return File(classLoader.getResource(name)?.file ?: error("Not found: $name"))
     }
 }
